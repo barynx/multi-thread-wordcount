@@ -52,14 +52,13 @@ class WordcountMap {
     /**
      * Helper method for sorting map entries and returning them as a sorted List of map entries
      *
-     * @param wordOccurerencesMap map of word occurences
+     * @param wordOccurrencesMap map of word occurences
      * @return sorted list containing entries of the map
      */
-    private List<Entry<String, Counter>> sortMapEntries(Hashtable<String, Counter> wordOccurerencesMap){
+    private List<Entry<String, Counter>> sortMapEntries(Hashtable<String, Counter> wordOccurrencesMap){
 
-        List<Entry<String, Counter>> list = new ArrayList<>();
-        list.addAll(wordOccurerencesMap.entrySet());
-        Collections.sort(list, new WordcountEntryComparator());
+        List<Entry<String, Counter>> list = new ArrayList<>(wordOccurrencesMap.entrySet());
+        list.sort(new WordcountEntryComparator());
 
         return list;
     }
