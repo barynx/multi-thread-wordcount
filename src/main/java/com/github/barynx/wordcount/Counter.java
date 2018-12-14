@@ -6,7 +6,7 @@ package com.github.barynx.wordcount;
  */
 public class Counter {
 
-    private long value;
+    private volatile long value;
 
     public Counter(){
         value = 1;
