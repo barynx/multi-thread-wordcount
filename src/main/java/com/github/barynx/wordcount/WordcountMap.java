@@ -1,4 +1,5 @@
 package com.github.barynx.wordcount;
+
 import java.util.*;
 import java.util.Map.Entry;
 

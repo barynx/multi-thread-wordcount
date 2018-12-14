@@ -2,7 +2,6 @@ package com.github.barynx.wordcount;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class MultiThreadWordcount {
@@ -21,7 +20,7 @@ public class MultiThreadWordcount {
         } else {
 
             // Create a list of Files for filepaths passed in args
-            List<File> filesList = new LinkedList<>();
+            List<File> filesList = new ArrayList<>();
             for (String filePath : args ) {
                 filesList.add(new File(filePath));
             }
