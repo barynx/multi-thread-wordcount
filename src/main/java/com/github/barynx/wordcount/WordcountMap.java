@@ -2,19 +2,21 @@ package com.github.barynx.wordcount;
 
 import java.util.*;
 import java.util.Map.Entry;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  *  Class responsible for keeping a current state of word counting and providing a way to retrieve most common words.
  */
 class WordcountMap {
 
-    // Map of words and its occurrences counter implemented as Hashtable because it is a synchronized collection for the purpose of multi-thread implementation of wordcount
-    private Hashtable<String, Counter> wordOccurrencesMap;
+    // Map of words and its occurrences counter implemented as ConcurrentHashMap for the purpose of effective
+    // multi-thread implementation of wordcount
+    private ConcurrentHashMap<String, Counter> wordOccurrencesMap;
 
 
     WordcountMap(){
 
-        wordOccurrencesMap = new Hashtable<>();
+        wordOccurrencesMap = new ConcurrentHashMap<>();
     }
 
     /**
@@ -56,7 +58,7 @@ class WordcountMap {
      * @param wordOccurrencesMap map of word occurences
      * @return sorted list containing entries of the map
      */
-    private List<Entry<String, Counter>> sortMapEntries(Hashtable<String, Counter> wordOccurrencesMap){
+    private List<Entry<String, Counter>> sortMapEntries(ConcurrentHashMap<String, Counter> wordOccurrencesMap){
 
         List<Entry<String, Counter>> list = new ArrayList<>(wordOccurrencesMap.entrySet());
         list.sort(new WordcountEntryComparator());
