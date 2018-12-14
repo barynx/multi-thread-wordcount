@@ -7,7 +7,6 @@ import java.util.List;
 public class MultiThreadWordcount {
 
     /**
-     *
      * Gets a comma separated list of filepaths to text files as arguments and processes each file in a separate thread.
      * Prints out the list of most common words in the input files.
      *
@@ -16,15 +15,14 @@ public class MultiThreadWordcount {
      */
     public static void main(String[] args) throws InterruptedException {
 
-        if(args.length == 0){
+        if (args.length == 0) {
             System.out.println("No files to be processed. Please provide space separated list of files to be processed.");
-        }
-        else{
+        } else {
 
             // Create a list of Files for filepaths passed in args
             List<File> filesList = new LinkedList<>();
-            for (int i = 0; i<args.length; i++) {
-                filesList.add(new File(args[i]));
+            for (String filePath : args ) {
+                filesList.add(new File(filePath));
             }
 
             // initialize a new word occurences map
@@ -33,8 +31,8 @@ public class MultiThreadWordcount {
             // create a thread for each file and start them
             Thread threads[] = new Thread[filesList.size()];
 
-            for (int i = 0; i <filesList.size(); i++){
-                threads[i] = new Thread(new FileProcessor(filesList.get(i),wordFrequencies));
+            for (int i = 0; i < filesList.size(); i++) {
+                threads[i] = new Thread(new FileProcessor(filesList.get(i), wordFrequencies));
                 threads[i].start();
             }
 
@@ -47,8 +45,9 @@ public class MultiThreadWordcount {
             String topWords[] = wordFrequencies.getTop(10);
 
             //print to console top 10 most common words
-            for (int i = 0; i < topWords.length ; i++)
-                System.out.println(topWords[i]);
+            for (String word : topWords) {
+                System.out.println(word);
+            }
         }
     }
 }
