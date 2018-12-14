@@ -34,16 +34,16 @@ class WordcountMap {
      * @param number a number of most common word occurences to be returned
      * @return a list of top n words in the word occurences map
      */
-    String[] getTop(int number){
+    List<String> getTop(int number){
 
         List<Entry<String, Counter>> list = sortMapEntries(wordOccurrencesMap);
         int topWordsSize = number;
         if (list.size() < number) topWordsSize = list.size();
 
-        String topWords[] = new String[topWordsSize];
+        List<String> topWords = new ArrayList<>();
 
         for(int i = 0; i < topWordsSize; i++){
-            topWords[i] = list.get(i).getKey();
+            topWords.add(list.get(i).getKey());
         }
             return topWords;
     }

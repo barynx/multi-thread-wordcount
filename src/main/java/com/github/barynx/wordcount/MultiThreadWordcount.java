@@ -1,6 +1,7 @@
 package com.github.barynx.wordcount;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -29,11 +30,11 @@ public class MultiThreadWordcount {
             WordcountMap wordFrequencies = new WordcountMap();
 
             // create a thread for each file and start them
-            Thread threads[] = new Thread[filesList.size()];
+            List<Thread> threads = new ArrayList<>();
 
             for (int i = 0; i < filesList.size(); i++) {
-                threads[i] = new Thread(new FileProcessor(filesList.get(i), wordFrequencies));
-                threads[i].start();
+                threads.add(new Thread(new FileProcessor(filesList.get(i), wordFrequencies)));
+                threads.get(i).start();
             }
 
             //wait for all file processing threads to be finished.
@@ -42,7 +43,7 @@ public class MultiThreadWordcount {
             }
 
             // retrieve top 10 words from the map
-            String topWords[] = wordFrequencies.getTop(10);
+            List<String> topWords = wordFrequencies.getTop(10);
 
             //print to console top 10 most common words
             for (String word : topWords) {
