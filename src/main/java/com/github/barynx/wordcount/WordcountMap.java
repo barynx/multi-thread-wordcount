@@ -5,13 +5,13 @@ import java.util.Map.Entry;
 /**
  *  Class responsible for keeping a current state of word counting and providing a way to retrieve most common words.
  */
-public class WordcountMap {
+class WordcountMap {
 
     // Map of words and its occurrences counter implemented as Hashtable because it is a synchronized collection for the purpose of multi-thread implementation of wordcount
     private Hashtable<String, Counter> wordOccurrencesMap;
 
 
-    public WordcountMap(){
+    WordcountMap(){
 
         wordOccurrencesMap = new Hashtable<>();
     }
@@ -20,7 +20,7 @@ public class WordcountMap {
      * Updates a map of word occurrences with a given word
      * @param word a word to be inserted into a map of word occurences
      */
-    public void updateWordFrequenciesMap(String word) {
+    void updateWordFrequenciesMap(String word) {
 
         if(wordOccurrencesMap.containsKey(word)){
             wordOccurrencesMap.put(word, wordOccurrencesMap.get(word).increaseValue());
@@ -34,7 +34,7 @@ public class WordcountMap {
      * @param number a number of most common word occurences to be returned
      * @return a list of top n words in the word occurences map
      */
-    public String[] getTop(int number){
+    String[] getTop(int number){
 
         List<Entry<String, Counter>> list = sortMapEntries(wordOccurrencesMap);
         int topWordsSize = number;

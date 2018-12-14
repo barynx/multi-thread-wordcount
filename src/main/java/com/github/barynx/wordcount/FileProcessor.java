@@ -11,7 +11,7 @@ public class FileProcessor implements Runnable {
     private File inputFile;
     private WordcountMap outputMap;
 
-    public FileProcessor(File inputFile, WordcountMap outputMap){
+    FileProcessor(File inputFile, WordcountMap outputMap){
         this.inputFile = inputFile;
         this.outputMap = outputMap;
     }
