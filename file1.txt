@@ -1,0 +1,36 @@
+aesthetics, there’s a concept called the Uncanny Valley. If you’re familiar with science fiction you may have heard of it; if not, you’ve probably experienced it. The general idea is that a robot or other human-like object that looks almost human, but not quite, is far more disturbing than a robot that doesn’t look like a human. The concept is not unlike how unnerving those facial recognition emojis can be.
+
+The same principle can be applied to user experience (UX) aesthetics in a similar way, especially when it comes to scrolljacking—aka when the scroll motion/movement does something other than the expected advancing up or down a page. If you have your front-end JavaScript emulating scrolling programmatically, it has to be good, or everyone can see that the scrolling isn’t really quite right. Even if it’s just a subtle difference, people can notice that something so fundamental to a web page, like scrolling, isn’t the native browser action they’re used to.
+
+To quote the usability expert Jakob Neilsen: “Consistency is one of the most powerful usability principles: When things always behave the same, users don’t have to worry about what will happen.”
+
+If you notice a difference, so will your users, even if they don’t know the words to express it. We can pretty much guarantee that any added benefit that your scrolljacking plugin affords your page is not worth launching your users into the gaping maw of the UX Uncanny Valley.
+
+If you’ve found a way to seamlessly scroll programmatically, that’s great. However, that might not be a good reason to do it.
+Not All Devices Are Created Equal
+
+At Brunch, cross-browser and cross-platform testing is a huge part of the development process. However, we firmly believe a good rule of thumb in web development is to be as inclusive as possible (within reason, of course; don’t lose too much sleep about your site not looking quite as pretty in IE 6).
+
+The processing power of devices and efficiency of browsers varies widely, even within the window of browsers and devices you should reasonably support—even among versions of the same device. According to Geekbench, which collects user-submitted benchmark reports from different devices, the iPhone XS has more than six times the aggregate processing power of the iPhone 5 (which is still supported as of December 2018). Many mobile devices are nowhere near as powerful as desktop devices.
+
+Case in point: Even if your scrolljacking provides seamless scrolling animation, it’s probably not going to look the same across all devices.
+Don’t Reinvent the Wheel
+
+Users have come to expect certain conventions when browsing the web. By introducing new, atypical methods of accessing content on a site, you’re actually burdening the user and making it more difficult for them to access content. There’s always an inherent risk in drastically changing how users see the webpage, so there should usually be a very specific reason to make the change.
+
+You don’t need to entirely scrap the behavior that users have become accustomed to.
+
+One example is horizontal scrolling. Because most people aren’t used to accessing content horizontally, they’re forced to maintain closer attention and exert more effort to maintain the horizontal drag/scroll. They’re also not used to seeing content there. As such, they could easily overlook this content by mistake. Same goes for navigation cues. Again, because this behavior is often new to users, it’s likely the content won’t get noticed.
+
+Another reason for frustration is that when a designer or developer is introducing new scrolling methods, they are essentially taking that decision away from users. This leads to a feeling of less control and creates a learning curve, even if it is quick. Users can have short attention spans, and it’s important to capitalize on the short amount of time we have to get the content across as quickly and as easily as possible.
+
+Lastly, another issue with taking scrolling out of the hands of the browser is directly tied to maintainable code. Browsers’ basic UX, like scrolling on a page, is optimized and integrated with a low-level browser engine running the application, like Chromium for Chrome or Gecko for Firefox. Creating your own scrolling with extraneous JavaScript not only uses valuable processing resources, it assumes that your custom scrolling library can and will be updated as web browsers grow and change. Maybe it will work just as well in five years or maybe the developers will continue improving and supporting it that long, but it’s a piece of your codebase you’ll have to be concerned about maintaining or rewriting in the future.
+Things Are Better Things Now
+
+There’s actually quite a few options when it comes to scrolling behavior—that don’t involve completely upending typical conventions, aka not reinventing the wheel.
+
+    You don’t need to entirely scrap the behavior that users have become accustomed to.
+
+ScrollMagic is one method. This effect of having elements fade in as you scroll vertically has become quite popular and is seen all over the web. Apple products usually use some combination of this type of effect, with some sort of delay between animations. (TweenMax does a great job of introducing animations on scroll, not on load).
+
+Essentially, you don’t need to entirely scrap the behavior that users have become accustomed to. It contributes to bad usability and user frustration. You can achieve high quality animation and interactive web layouts without sacrificing usability and typical web convention. The idea is to enhance content layout and make the web more exciting and enjoyable to use—not create barriers to accessing content.

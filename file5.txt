@@ -1,0 +1,9 @@
+From what I know and researched, the synchronized keyword in Java lets synchronize 
+a method or code block statement to handle multi-threaded access. If I want to lock
+ a file for writing purposes on a multi-threaded environment, I must should use the 
+classes in the Java NIO package to get the best results. Yesterday, I come up with 
+a question about handling a shared servlet for file I/O operations, and BalusC 
+comments are good to help with the solution, but the code in this answer confuses me. 
+I'm not asking community "burn that post" or "let's downvote him" (note: I haven't 
+downvoted it or anything, and I have nothing against the answer), I'm asking for an 
+xplanation if the code fragment can be considered a good practice

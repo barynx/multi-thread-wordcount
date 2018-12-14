@@ -1,0 +1,35 @@
+This is a new column where I search Product Hunt for products that are likely to change your life for the better, then test those products on myself and a handful of other productivity nerds. (I have no affiliation with Product Hunt, it’s just a great place to find new products.)
+
+The internet can be a great source of information. Sadly, much of that information is tailored to manipulate our reasoning skills. We accept the facts, ideas, and opinions we read at face value, and then adopt them wholesale. This is especially true on social media, where we take the number of likes and shares as social proof that what we are reading is important or trustworthy.
+
+Unfortunately, many of the metrics of social proof are gamed?—?it can cost as little as $3 to buy 100 likes on a tweet.
+
+The Remove Vanity Metrics Chrome Plugin aims to help you break that cycle of manipulation by social proof.
+
+By removing the number of likes, retweets, and followers from your Twitter feed, it forces you to assess each tweet on its own merit. The goal is to turn you into an independent thinker?—?a person who judges people’s contributions free from social proof.
+
+Here’s how a tweet looks before and after removing social proof:
+
+I took this tool for a spin for the past two weeks. Here’s how it works, what it feels like, and what you need to know to run a similar experiment yourself.
+How To Set Up Remove Vanity Metrics
+
+Right now, Remove Vanity Metrics (RVM) is only available for Google Chrome. To set it up, all you have to do is add the extension. If you’ve never added an extension before, it’s incredibly simple. Click over to the Extension page and then click the ‘Add to Chrome’ button.
+
+Once the extension is installed, you’ll see RVM’s praying hands (??) icon in your address bar. If you don’t like RVM, uninstalling is as simple as right-clicking on the icon.
+
+Once you activate RVM, social proof will be removed from your Twitter feed immediately. Now, whenever you visit Twitter in your browser, all of the reply, like and retweet counts will be gone. A nice thing about this tool is that it’s set-it-and-forget-it. Once you install RVM, you’ll never have to think about it again.
+
+Sometimes, the numbers might flash up briefly when the page loads, but within a second or so, they’ll disappear. Video views do still show up?—?underneath the hood, the RVM plugin is able to edit the HTML that you see, but can’t do anything to change any of the video widgets that show up on Twitter.
+What Does Twitter Without Social Proof Feel Like?
+
+In addition to using RVM during my usual Twitter visits, I decided to spend an extra 5–10 minutes on the platform each morning focused on the new experience. Here is what I noticed.
+You’ll still get sucked into Twitter
+
+Sometimes, that 5–10 minute visit turned into 20 minutes. Removing social proof did not stop me from falling down the rabbit hole of Twitter addiction.
+
+I mainly use Twitter for work and learning, so my feed is a colorful mix of scientists, experts, authors, gurus, writers, thinkers, investors, crypto traders, and the odd viral video. The fact that it’s interesting doesn’t change, even when it’s not full of signals that “I should really check out this tweet, because 13,000 others have done so.”
+
+But while I still lost myself longer than I’d planned, I immediately noticed the quality of my interactions with the content improved.
+You’ll spend more time analyzing each tweet
+
+While I was testing, this soccer “highlight” went viral and made its way into my feed:
