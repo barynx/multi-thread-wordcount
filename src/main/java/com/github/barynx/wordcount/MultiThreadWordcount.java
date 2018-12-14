@@ -3,6 +3,9 @@ package com.github.barynx.wordcount;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 public class MultiThreadWordcount {
 
@@ -29,17 +32,14 @@ public class MultiThreadWordcount {
             WordcountMap wordFrequencies = new WordcountMap();
 
             // create a thread for each file and start them
-            List<Thread> threads = new ArrayList<>();
-
+            ExecutorService executorService = Executors.newCachedThreadPool();
             for (int i = 0; i < filesList.size(); i++) {
-                threads.add(new Thread(new FileProcessor(filesList.get(i), wordFrequencies)));
-                threads.get(i).start();
+                executorService.execute(new FileProcessor(filesList.get(i), wordFrequencies));
             }
 
             //wait for all file processing threads to be finished.
-            for (Thread thread : threads) {
-                thread.join();
-            }
+            executorService.shutdown();
+            executorService.awaitTermination(60000, TimeUnit.MILLISECONDS);
 
             // retrieve top 10 words from the map
             List<String> topWords = wordFrequencies.getTop(10);
