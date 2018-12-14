@@ -21,7 +21,7 @@ class WordcountMap {
      * Updates a map of word occurrences with a given word
      * @param word a word to be inserted into a map of word occurences
      */
-    void updateWordFrequenciesMap(String word) {
+    void updateWordOccurrencesMap(String word) {
 
         if(wordOccurrencesMap.containsKey(word)){
             wordOccurrencesMap.put(word, wordOccurrencesMap.get(word).increaseValue());

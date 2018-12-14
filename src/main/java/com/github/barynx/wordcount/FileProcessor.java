@@ -27,7 +27,7 @@ public class FileProcessor implements Runnable {
 
                 for (String word : words)
                 {
-                    outputMap.updateWordFrequenciesMap(word);
+                    outputMap.updateWordOccurrencesMap(word);
                 }
             }
         } catch (FileNotFoundException e) {
