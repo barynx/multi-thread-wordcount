@@ -22,19 +22,13 @@ public class MultiThreadWordcount {
             System.out.println("No files to be processed. Please provide space separated list of files to be processed.");
         } else {
 
-            // Create a list of Files for filepaths passed in args
-            List<File> filesList = new ArrayList<>();
-            for (String filePath : args ) {
-                filesList.add(new File(filePath));
-            }
-
             // initialize a new word occurences map
             WordcountMap wordFrequencies = new WordcountMap();
 
             // create a thread for each file and start them
             ExecutorService executorService = Executors.newCachedThreadPool();
-            for (int i = 0; i < filesList.size(); i++) {
-                executorService.execute(new FileProcessor(filesList.get(i), wordFrequencies));
+            for (String filePath : args) {
+                executorService.execute(new FileProcessor(new File(filePath), wordFrequencies));
             }
 
             //wait for all file processing threads to be finished.
