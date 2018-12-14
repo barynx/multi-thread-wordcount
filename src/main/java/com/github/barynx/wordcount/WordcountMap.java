@@ -30,7 +30,8 @@ class WordcountMap {
     }
 
     /**
-     * Returns top n most frequently occuring words in the word occurences map
+     * Returns top n most frequently occuring words in the word occurences map. If the number of words in the map is less
+     * than a specified number, then return all words.
      *
      * @param number a number of most common word occurences to be returned
      * @return a list of top n words in the word occurences map
