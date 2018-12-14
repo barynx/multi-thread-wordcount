@@ -13,7 +13,10 @@ public class Counter {
     }
 
     public Counter increaseValue() {
-        value = value + 1;
+
+        synchronized (this) {
+            value = value + 1;
+        }
         return this;
     }
 

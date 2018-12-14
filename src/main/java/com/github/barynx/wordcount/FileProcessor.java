@@ -14,7 +14,7 @@ public class FileProcessor implements Runnable {
     public FileProcessor(File inputFile, WordcountMap outputMap){
         this.inputFile = inputFile;
         this.outputMap = outputMap;
-    };
+    }
 
     @Override
     public void run() {
