@@ -30,8 +30,6 @@ public class FileProcessor implements Runnable {
                     outputMap.updateWordOccurrencesMap(word);
                 }
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
